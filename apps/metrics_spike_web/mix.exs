@@ -24,7 +24,7 @@ defmodule MetricsSpikeWeb.Mixfile do
   def application do
     [
       mod: {MetricsSpikeWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :metrics_dynamodb]
     ]
   end
 
