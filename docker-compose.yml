@@ -1,0 +1,17 @@
+version: "2"
+services:
+  spike:
+    build: .
+    ports:
+      - 4000:4000
+    command: mix do deps.get, phx.server
+    environment:
+      - MIX_ENV=dev
+      - PORT=4000
+    volumes:
+      - .:/app
+  dynamodb:
+    image: dwmkerr/dynamodb:latest
+    ports:
+      - "8000:8000"
+    command: -sharedDb

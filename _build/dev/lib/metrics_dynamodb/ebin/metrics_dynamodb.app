@@ -1,0 +1,12 @@
+{application,metrics_dynamodb,
+             [{applications,[kernel,stdlib,elixir,logger,poison,hackney,
+                             sweet_xml,ex_aws,ex_aws_dynamo,ex_aws_s3]},
+              {description,"metrics_dynamodb"},
+              {modules,['Elixir.ExAws.Dynamo.Encodable.MetricsDynamoDB.CreateEntry',
+                        'Elixir.MetricsDynamoDB',
+                        'Elixir.MetricsDynamoDB.Application',
+                        'Elixir.MetricsDynamoDB.CreateEntry']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {extra_applications,[logger]},
+              {mod,{'Elixir.MetricsDynamoDB.Application',[]}}]}.
