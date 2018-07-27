@@ -6,9 +6,16 @@ defmodule MetricsDynamoDBTest do
     assert MetricsDynamoDB.hello() == :world
   end
 
+  @tag :skip
   test "create table" do
-    IO.inspect(Mix.env)
-    la = 'lala'
-    a = MetricsDynamoDB.CreateEntry.call
+    MetricsDynamoDB.CreateTable.call
+  end
+
+  test "put item" do
+    MetricsDynamoDB.PutItem.call
+  end
+
+  test "get item" do
+    MetricsDynamoDB.GetItem.call
   end
 end
