@@ -37,7 +37,12 @@ config :ex_aws,
 config :ex_aws, :dynamodb,
   access_key_id: [{:system, "AWS_ACCESS_KEY_ID"}, :instance_role],
   secret_access_key: [{:system, "AWS_SECRET_ACCESS_KEY"}, :instance_role],
-  scheme: "http://",
-  host: "localhost",
-  port: 8000,
-  region: ""
+  # scheme: "http://",
+  # host: "localhost",
+  # port: 8000,
+  region: "us-east-2"
+
+config :ex_aws, :retries,
+  max_attempts: 10,
+  base_backoff_in_ms: 10,
+  max_backoff_in_ms: 10_000

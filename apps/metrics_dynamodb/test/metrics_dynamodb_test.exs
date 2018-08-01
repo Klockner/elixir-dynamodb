@@ -6,9 +6,9 @@ defmodule MetricsDynamoDBTest do
     assert MetricsDynamoDB.hello() == :world
   end
 
-  @tag :skip
+  # @tag :skip
   test "create table" do
-    MetricsDynamoDB.CreateTable.call
+    MetricsDynamoDB.CreateTable.call("Localiost", "user")
   end
 
   test "put item" do

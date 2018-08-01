@@ -4,7 +4,7 @@ services:
     build: .
     ports:
       - 4000:4000
-    command: mix do deps.get, phx.server
+    command: mix do deps.get
     environment:
       - MIX_ENV=dev
       - PORT=4000
@@ -13,5 +13,5 @@ services:
   dynamodb:
     image: dwmkerr/dynamodb:latest
     ports:
-      - "8000:8000"
+      - 8000:8000
     command: -sharedDb

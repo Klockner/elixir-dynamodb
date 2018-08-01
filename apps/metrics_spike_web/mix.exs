@@ -43,6 +43,7 @@ defmodule MetricsSpikeWeb.Mixfile do
       {:metrics_spike, in_umbrella: true},
       {:metrics_dynamodb, in_umbrella: true},
       {:cowboy, "~> 1.0"},
+      {:hackney, "~> 1.9"},
     ]
   end
 

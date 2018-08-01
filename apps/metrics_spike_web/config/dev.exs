@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :metrics_spike_web, MetricsSpikeWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: System.get_env("PORT") || 4000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -28,5 +28,3 @@ config :metrics_spike_web, MetricsSpikeWeb.Endpoint,
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on
 # different ports.
-
-

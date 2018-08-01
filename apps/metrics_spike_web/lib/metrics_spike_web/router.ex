@@ -9,5 +9,8 @@ defmodule MetricsSpikeWeb.Router do
     pipe_through :api
 
     get "/", EventController, :index
+    post "/", EventController, :create
+
+    get "/seed", EventController, :seed
   end
 end
