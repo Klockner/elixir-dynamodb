@@ -1,2 +1,3 @@
 /_build
 /deps
+/apps/metrics_dynamodb/.env
