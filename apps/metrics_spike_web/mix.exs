@@ -24,7 +24,7 @@ defmodule MetricsSpikeWeb.Mixfile do
   def application do
     [
       mod: {MetricsSpikeWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools, :metrics_dynamodb]
+      extra_applications: [:logger, :runtime_tools, :metrics_dynamodb, :timex]
     ]
   end
 
@@ -44,6 +44,7 @@ defmodule MetricsSpikeWeb.Mixfile do
       {:metrics_dynamodb, in_umbrella: true},
       {:cowboy, "~> 1.0"},
       {:hackney, "~> 1.9"},
+      {:timex, "~> 3.1"}
     ]
   end
 

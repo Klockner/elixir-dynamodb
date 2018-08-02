@@ -12,5 +12,6 @@ defmodule MetricsSpikeWeb.Router do
     post "/", EventController, :create
 
     get "/seed", EventController, :seed
+    get "/web_sessions", EventController, :map_reduce_web_session
   end
 end
